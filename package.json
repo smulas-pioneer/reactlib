@@ -1,0 +1,29 @@
+{
+  "name": "reactlib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smulas/reactlib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smulas/reactlib/issues"
+  },
+  "homepage": "https://github.com/smulas/reactlib#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "react-bootstrap": "^0.29.4"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.1"
+  }
+}
