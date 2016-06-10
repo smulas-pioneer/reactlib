@@ -1,10 +1,13 @@
 {
   "name": "reactlib",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.5",
+  "description": "React component libray",
   "main": "index.js",
+  "directories": {
+    "dist":true
+  },
   "scripts": {
-    "start":"webpack-dev-server",
+    "predemo":"echo demo is starting",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +15,7 @@
     "url": "git+https://github.com/smulas/reactlib.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "@smulas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/smulas/reactlib/issues"

@@ -4,11 +4,16 @@
         "target": "es5",
         "jsx": "react",
         "moduleResolution": "node",
-        "sourceMap": true
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "./"
+
     },
+    
     "exclude": [
         "node_modules",
-        "typings/main",
-        "typings/main.d.ts"
+        "typings/browser",
+        "typings/browser.d.ts",
+        "dist"
     ]
 }

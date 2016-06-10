@@ -1,20 +1,14 @@
 var webpack = require('webpack');
 
 module.exports = [
-    {
-        name: 'client',
+   {
+        name: 'dist',
         cache: true,
         entry: {
-            app:  './demo/App.tsx',
-            //main: './src/server/main.ts'
-        },
-         devServer: {
-            hot: true,
-            port: 7777,
-            contentBase: "./demo"
+            lib:  './src/ReactLib',
         },
         output: {
-            path: 'demo/build',
+            path: 'dist',
             filename: '[name].js'
         },
         resolve: {
