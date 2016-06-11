@@ -7,6 +7,6 @@
         "node_modules":true,   
         "typings": true,
         "lib":true,          //Output folder
-        "index.*":true       //Output entry point
+        "_index.*":true       //Output entry point
     }
 }

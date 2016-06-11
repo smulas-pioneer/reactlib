@@ -7,7 +7,9 @@
     "clean": "rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bump": "npm version patch -m \"Bumped to %s \"",
-    "build": "npm run clean && tsc && echo \"built..\""
+    "build": "npm run clean && tsc && echo \"built..\"",
+    "prepublish": "npm run build",
+    "postpublish": "npm run bump"
   },
   "repository": {
     "type": "git",
