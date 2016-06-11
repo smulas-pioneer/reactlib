@@ -9,4 +9,22 @@ npm install
 typings install
 ```
 
+## Run Demo
+```
+cd demo
+npm install
+typings install
+npm start
+```
+Open your browser in http://localhost:7777
+
+
+## Use in your application
+
+```
+npm install --save reactlib
+typings install --save reactlib
+```
+
+
 
