@@ -9,6 +9,11 @@ npm install
 typings install
 ```
 
+### Build
+```
+npm run build
+```
+
 ## Run Demo
 ```
 cd demo
