@@ -6,13 +6,14 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "declaration": true,
-        "outDir": "dist"
+        "outDir": "./"
     },
     
     "exclude": [
         "node_modules",
         "typings/browser",
         "typings/browser.d.ts",
-        "dist"
+        "lib",
+        "index.d.ts"
     ]
 }

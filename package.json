@@ -4,13 +4,10 @@
   "description": "React component libray",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bump": "npm version patch -m \"Bumped to %s \"",
     "build": "npm run clean && tsc && echo \"built..\""
-  },
-  "directories": {
-    "bin": "dist"
   },
   "repository": {
     "type": "git",
