@@ -4,9 +4,7 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.DS_Store": true,
-        "demo/**/*.js":true,
-        "demo/**/*.map":true,
-        "misc/**/*.js":true,
-        "misc/**/*.map":true
+        "node_modules":true,   
+        "typings": true
     }
 }

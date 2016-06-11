@@ -3,12 +3,14 @@
   "version": "0.0.7",
   "description": "React component libray",
   "main": "index.js",
-  "directories": {
-    "dist": true
-  },
   "scripts": {
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bump": "npm version patch -m \"Bumped to %s \""
+    "bump": "npm version patch -m \"Bumped to %s \"",
+    "build": "npm run clean && tsc && echo \"built..\""
+  },
+  "directories": {
+    "bin":"dist"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "react-bootstrap": "^0.29.4"
   },
   "devDependencies": {
+    "rimraf": "^2.5.2",
     "ts-loader": "^0.8.2",
     "webpack": "^1.13.1"
   }

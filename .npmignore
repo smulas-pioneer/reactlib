@@ -1,3 +1,6 @@
 docs
 src
 typings
+tsconfig.json
+typings.json
+webpack.config.js
