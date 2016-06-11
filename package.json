@@ -1,6 +1,6 @@
 {
   "name": "reactlib",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React component libray",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "npm run clean && tsc && echo \"built..\""
   },
   "directories": {
-    "bin":"dist"
+    "bin": "dist"
   },
   "repository": {
     "type": "git",
