@@ -1,2 +1,13 @@
 node_modules
 typings
+lib
+src/**/*.js
+src/**/*.d.ts
+src/**/*.js.map
+./index.js
+./index.d.ts
+./index.js.map
+
+
+
+

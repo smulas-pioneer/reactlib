@@ -22,6 +22,7 @@
   "homepage": "https://github.com/smulas/reactlib#readme",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "object-assign": "^4.1.0",
     "react-bootstrap": "^0.29.4"
   },
   "devDependencies": {
