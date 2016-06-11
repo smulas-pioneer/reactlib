@@ -1,14 +1,14 @@
 {
   "name": "reactlib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React component libray",
   "main": "index.js",
   "directories": {
-    "dist":true
+    "dist": true
   },
   "scripts": {
-    "predemo":"echo demo is starting",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bump": "npm version patch -m \"Bumped to %s \""
   },
   "repository": {
     "type": "git",
