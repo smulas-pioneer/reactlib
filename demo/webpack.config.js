@@ -5,11 +5,16 @@ module.exports = [
         name: 'dist',
         cache: true,
         entry: {
-            lib:  './src/ReactLib',
+            lib:  './app.tsx',
         },
         output: {
             path: 'dist',
             filename: '[name].js'
+        },
+        devServer: {
+            hot: true,
+            port: 7777,
+            contentBase: "./"
         },
         resolve: {
             extensions: ['','.webpack.js', '.web.js', '.ts', '.tsx','.js']

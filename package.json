@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bump": "npm version patch -m \"Bumped to %s \"",
+    "bump": "npm version patch -m \"Bumped to %s \" && git push",
     "build": "npm run clean && tsc && echo \"built..\"",
     "prepublish": "npm run build",
     "postpublish": "npm run bump"

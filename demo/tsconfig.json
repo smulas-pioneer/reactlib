@@ -5,10 +5,9 @@
         "jsx": "react",
         "moduleResolution": "node",
         "sourceMap": true,
-        "declaration": true,
-        "outDir": "./"
+        "declaration": false,
+        "outDir": "dist"
     },
-    
     "exclude": [
         "node_modules",
         "typings/browser",
