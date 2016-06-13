@@ -3,6 +3,7 @@ typings
 src/**/*.js
 src/**/*.d.ts
 src/**/*.js.map
+lib
 index.js
 index.d.ts
 index.js.map
