@@ -1,6 +1,5 @@
 node_modules
 typings
-lib
 src/**/*.js
 src/**/*.d.ts
 src/**/*.js.map
