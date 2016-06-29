@@ -24,12 +24,16 @@
   "homepage": "https://github.com/smulas/reactlib#readme",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "draft-js": "^0.7.0",
+    "draft-js-import-html": "^0.1.10",
+    "immutable": "^3.8.1",
     "object-assign": "^4.1.0",
     "react-bootstrap": "^0.29.4"
   },
   "devDependencies": {
     "rimraf": "^2.5.2",
     "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
     "webpack": "^1.13.1"
   }
 }

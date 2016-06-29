@@ -5,8 +5,8 @@
         "**/.svn": true,
         "**/.DS_Store": true,
         "node_modules":true,   
-        "typings": true,
-        "lib":true,          //Output folder
+        "_typings": true,
+        "_lib":true,          //Output folder
         "index.*":true       //Output entry point
     }
 }

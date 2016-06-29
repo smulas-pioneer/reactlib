@@ -1,30 +1,27 @@
 var webpack = require('webpack');
 
 module.exports = [
-   {
-        name: 'dist',
-        cache: true,
-        entry: {
-            lib:  './app.tsx',
+    {
+        entry: "./app.tsx",
+        devServer: {
+            port: 7777
         },
         output: {
-            path: 'dist',
-            filename: '[name].js'
-        },
-        devServer: {
-            hot: true,
-            port: 7777,
-            contentBase: "./"
+            filename: 'dist/app.js'
         },
         resolve: {
-            extensions: ['','.webpack.js', '.web.js', '.ts', '.tsx','.js']
+            extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
         },
         devtool: 'source-map', // if we want a source map 
         module: {
             loaders: [
-                {test: /\.css$/,loader: "style-loader!css-loader" },
-                {test: /\.tsx?$/,loader: 'ts-loader'}
+                { test: /\.css$/, loader: "style-loader!css-loader" },
+                { test: /\.tsx?$/, loader: 'ts-loader' }
             ]
-        }
+        },
+        externals: {
+            "react": "React",
+            "react-dom": "ReactDOM"
+        },
     }
 ];

@@ -48,7 +48,7 @@ export class DeleteButton extends React.Component<DeleteButtonProps,DeleteButton
                             <div className="static-modal">
                                 <BS.Modal.Dialog>
                                 <BS.Modal.Header>
-                                    <BS.Modal.Title>Delete Confirmation</BS.Modal.Title>
+                                    <BS.Modal.Title>Delete Confirmation!</BS.Modal.Title>
                                 </BS.Modal.Header>
 
                                 <BS.Modal.Body >

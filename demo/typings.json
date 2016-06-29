@@ -1,8 +1,13 @@
 {
   "globalDependencies": {
     "bootstrap": "registry:dt/bootstrap#3.3.5+20160316155526",
+    "draft-js": "registry:dt/draft-js#0.2.2+20160316171810",
+    "node": "registry:dt/node#6.0.0+20160621231320",
     "react": "registry:dt/react#0.14.0+20160602151522",
     "react-bootstrap": "registry:dt/react-bootstrap#0.0.0+20160526141239",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  },
+  "dependencies": {
+    "object-assign": "registry:npm/object-assign#4.0.1+20160301180549"
   }
 }

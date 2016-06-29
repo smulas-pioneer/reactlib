@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {AjaxPicker} from 'reactlib';
+import {AjaxPicker} from '../../src/index';
 
 const list = [
     {id:1, description:'Elvis Presley'},
