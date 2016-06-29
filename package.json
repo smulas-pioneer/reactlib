@@ -1,6 +1,6 @@
 {
   "name": "reactlib",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "React component libray",
   "main": "index.js",
   "scripts": {
