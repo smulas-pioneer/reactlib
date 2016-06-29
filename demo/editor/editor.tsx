@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {RichTextEditor} from '../../src/index';
+import {RichTextEditor,EditorState} from '../../src/index';
 
 
 
@@ -9,27 +9,29 @@ export interface DemoProps {
 }
 
 export interface DemoState {
-    value: string;
+    state: EditorState;
 }
 
 export class Demo extends React.Component<DemoProps, DemoState>{
 
     constructor(props: DemoProps) {
         super(props);
-        this.state = {value:props.value}
+        this.state = {state: RichTextEditor.editorStateFromHTML(props.value)}
     }
 
-    onChange = (value: string) =>{
-        this.setState({value:value});
+    onChange = (value) =>{
+        this.setState({
+            state: value
+        });
     }
 
     render(){
         return(
          <div>
                 <h2>RichTextEditor demo</h2>
-                <RichTextEditor value={this.props.value} onChange={this.onChange}/>
+                <RichTextEditor editorState={this.state.state} onChange={this.onChange}/>
                 <hr/>
-                <pre>{this.state.value}</pre> 
+                <pre>{RichTextEditor.htmlFromEditorState(this.state.state)}</pre> 
              </div>
         )
     }
