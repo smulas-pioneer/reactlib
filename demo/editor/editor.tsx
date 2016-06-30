@@ -20,18 +20,22 @@ export class Demo extends React.Component<DemoProps, DemoState>{
     }
 
     onChange = (value) =>{
+       
         this.setState({
             state: value
         });
     }
 
     render(){
+        let editor = this.refs['editor'] as RichTextEditor;
+        let html = editor ? editor.getHtml() : '';
+
         return(
          <div>
                 <h2>RichTextEditor demo</h2>
-                <RichTextEditor editorState={this.state.state} onChange={this.onChange}/>
+                <RichTextEditor ref='editor' editorState={this.state.state} onChange={this.onChange}/>
                 <hr/>
-                <pre>{RichTextEditor.htmlFromEditorState(this.state.state)}</pre> 
+                <pre style={{whiteSpace:"normal"}}>{html}</pre> 
              </div>
         )
     }

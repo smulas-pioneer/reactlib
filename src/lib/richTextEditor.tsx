@@ -1,4 +1,6 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
 import {Button, ButtonGroup, Glyphicon, Jumbotron} from 'react-bootstrap';
 import {
     Editor,
@@ -45,6 +47,10 @@ export class RichTextEditor extends React.Component<RichTextEditorProps, RichTex
             editorState: props.editorState
         }
     }
+    public getHtml(){
+        const ed = ReactDOM.findDOMNode(this.refs['editor']);
+        return ed ? ed.innerHTML:'';
+    }
 
     render() {
 
@@ -75,6 +81,7 @@ export class RichTextEditor extends React.Component<RichTextEditorProps, RichTex
             </div>
         )
     }
+
 
     private blockRenderer = (block) => {
         if (block.getType() === 'atomic') {
@@ -126,8 +133,12 @@ export class RichTextEditor extends React.Component<RichTextEditorProps, RichTex
         });
     }
 
-    private insertImage = (file) => {
-        const entityKey = Entity.create('atomic', 'IMMUTABLE', { src: URL.createObjectURL(file) });
+    private insertImage = (src) => {
+
+        //src: URL.createObjectURL(file) 
+
+
+        const entityKey = Entity.create('atomic', 'IMMUTABLE', { src: src });
         this.onChange(AtomicBlockUtils.insertAtomicBlock(
             this.state.editorState,
             entityKey,
@@ -138,7 +149,14 @@ export class RichTextEditor extends React.Component<RichTextEditorProps, RichTex
     private handleFileInput = (e) => {
         const fileList = e.target.files;
         const file = fileList[0];
-        this.insertImage(file);
+     
+        const fr = new FileReader();
+        fr.onload = (e) =>{
+            let src  = e.target["result"];
+           this.insertImage(src);
+        };
+        fr.readAsDataURL(file);
+        //this.insertImage(file);
     }
 
     private handleUploadImage = () => {
@@ -168,6 +186,7 @@ const ImageComponent = ({ block }) => {
     const imgContent = Entity.get(block.getEntityAt(0))["data"].src;
     return <img src={imgContent} />;
 };
+
 
 const getSelectionRange = () => {
     const selection = window.getSelection();
@@ -200,10 +219,6 @@ const getSelectionCoords = (selectionRange) => {
     const offsetTop = rangeBounds.top - editorBounds.top - 42;
     return { offsetLeft, offsetTop };
 }
-
-
-
-
 
 interface ToolbarProps {
     editorState;

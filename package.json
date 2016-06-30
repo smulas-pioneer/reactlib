@@ -27,6 +27,7 @@
     "draft-js": "^0.7.0",
     "draft-js-import-html": "^0.1.10",
     "immutable": "^3.8.1",
+    "node": "0.0.0",
     "object-assign": "^4.1.0",
     "react-bootstrap": "^0.29.4"
   },

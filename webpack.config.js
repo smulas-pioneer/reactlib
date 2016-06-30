@@ -2,12 +2,15 @@ var webpack = require('webpack');
 
 module.exports = [
     {
-        entry: "./app.tsx",
+        entry: "./demo/app.tsx",
         devServer: {
             port: 7777
         },
+        node: {
+            fs: "empty"
+        },
         output: {
-            filename: 'dist/app.js'
+            filename: 'demo/dist/app.js'
         },
         resolve: {
             extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
